@@ -8,6 +8,11 @@ app = Flask(__name__)  #O Argumento name é usado para determinar o local em que
 def index():
     return '<h1>Hello World!</h1>'
 
+#Rota dinamica
+@app.route('/user/<name>')
+def user(name):
+    return f'<h1>Hello {name}!</h1>'
+
 """ #Usando o decorador app.add_url_rule
 def index():
     return '<h1>Hello World!</h1>'
